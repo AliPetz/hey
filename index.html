@@ -7,14 +7,9 @@
         height: 100%;
         margin: 0;
         font-family: serif, serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        text-align: center;
         background-color: #96f7d2;
         font-size: 1.2rem;
-        overflow-y: auto; /* Habilita rolagem vertical */
+        overflow-y: scroll; /* Força a rolagem vertical */
       }
 
       h1 {
@@ -28,7 +23,6 @@
         max-width: 600px;
         text-align: center;
         flex-grow: 1;
-        min-height: 300px; /* Altura mínima para garantir layout em telas pequenas */
       }
 
       .slider {
@@ -93,8 +87,7 @@
         font-family: serif, serif;
         width: 100%;
         font-size: 1rem;
-        position: relative; /* Altera a posição do footer */
-        margin-top: auto; /* Permite que o rodapé fique na parte inferior do conteúdo */
+        position: relative;
       }
 
       a {
@@ -114,39 +107,50 @@
       .bold-text {
         font-weight: bold;
       }
+
+      /* Ajuste de altura mínima para simular conteúdo maior e permitir rolagem */
+      .content {
+        height: 200vh; /* Simula altura de conteúdo maior que a tela */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
     </style>
   </head>
   
   <body>
-    <h1>Alipetz</h1> <!-- Título centralizado e maior -->
+    <div class="content">
+      <h1>Alipetz</h1> <!-- Título centralizado e maior -->
 
-    <div class="slidecontainer">
-      <!-- Slider para controle da porção de ração -->
-      <input type="range" min="0" max="180" value="50" class="slider" id="myRange">
-      <p><span class="bold-text">Controle a Porção de ração: <span id="demo">50</span> graus</span></p>
+      <div class="slidecontainer">
+        <!-- Slider para controle da porção de ração -->
+        <input type="range" min="0" max="180" value="50" class="slider" id="myRange">
+        <p><span class="bold-text">Controle a Porção de ração: <span id="demo">50</span> graus</span></p>
 
-      <br><br>
+        <br><br>
 
-      <!-- Botões para controle do servo -->
-      <label>Servo</label>
-      <button type="button" onclick="sendData2(1)" class="btn">Começar</button>
+        <!-- Botões para controle do servo -->
+        <label>Servo</label>
+        <button type="button" onclick="sendData2(1)" class="btn">Começar</button>
 
-      <br><br>
+        <br><br>
 
-      <label>Porte Pequeno</label>
-      <button type="button" onclick="sendData2(2)" class="btn">45 Graus</button>
+        <label>Porte Pequeno</label>
+        <button type="button" onclick="sendData2(2)" class="btn">45 Graus</button>
 
-      <br><br>
+        <br><br>
 
-      <label>Porte Médio</label>
-      <button type="button" onclick="sendData2(3)" class="btn">90 Graus</button>
+        <label>Porte Médio</label>
+        <button type="button" onclick="sendData2(3)" class="btn">90 Graus</button>
 
-      <br><br>
+        <br><br>
 
-      <label>Porte Grande</label>
-      <button type="button" onclick="sendData2(4)" class="btn">180 Graus</button>
+        <label>Porte Grande</label>
+        <button type="button" onclick="sendData2(4)" class="btn">180 Graus</button>
 
-      <p><span id="isiStatusSER1"></span></p>
+        <p><span id="isiStatusSER1"></span></p>
+      </div>
     </div>
 
     <script>
