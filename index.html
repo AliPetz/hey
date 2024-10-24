@@ -10,16 +10,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start; /* Ajustado para que o conteúdo comece no topo */
+        justify-content: flex-start;
         text-align: center;
-        background-color: #96f7d2; /* Fundo verde água claro e vivo */
-        font-size: 1.2rem; /* Tamanho da fonte */
-        overflow: auto; /* Permite a rolagem */
+        background-color: #96f7d2;
+        font-size: 1.2rem;
+        overflow-y: auto; /* Habilita rolagem vertical */
       }
 
       h1 {
         margin-bottom: 30px;
-        font-size: 3.5rem; /* Tamanho do título aumentado */
+        font-size: 3.5rem;
         color: black;
       }
 
@@ -27,7 +27,8 @@
         width: 100%;
         max-width: 600px;
         text-align: center;
-        flex-grow: 1; /* Garante que o slidecontainer ocupe o espaço disponível */
+        flex-grow: 1;
+        min-height: 300px; /* Altura mínima para garantir layout em telas pequenas */
       }
 
       .slider {
@@ -35,7 +36,7 @@
         width: 50%;
         height: 15px;
         border-radius: 5px;
-        background: rgb(128, 0, 128); /* Cor roxa viva */
+        background: rgb(128, 0, 128);
         outline: none;
         opacity: 0.8;
         -webkit-transition: .2s;
@@ -52,7 +53,7 @@
         width: 25px;
         height: 25px;
         border-radius: 50%;
-        background: rgb(128, 0, 128); /* Cor roxa viva */
+        background: rgb(128, 0, 128);
         cursor: pointer;
       }
 
@@ -60,12 +61,12 @@
         width: 25px;
         height: 25px;
         border-radius: 50%;
-        background: rgb(128, 0, 128); /* Cor roxa viva */
+        background: rgb(128, 0, 128);
         cursor: pointer;
       }
 
       .btn {
-        background-color: rgb(128, 0, 128); /* Cor roxa viva */
+        background-color: rgb(128, 0, 128);
         color: white;
         padding: 14px 25px;
         text-align: center;
@@ -76,25 +77,24 @@
         cursor: pointer;
         border-radius: 5px;
         transition: background-color 0.2s ease;
-        font-size: 1rem; /* Tamanho da fonte dos botões */
+        font-size: 1rem;
         font-family: serif, serif;
       }
 
       .btn:hover {
-        background-color: #9400d3; /* Roxo mais escuro ao passar o mouse */
+        background-color: #9400d3;
       }
 
       .footer {
-        background-color: transparent; /* Fundo transparente */
+        background-color: transparent;
         padding: 8px;
         text-align: center;
         color: black;
         font-family: serif, serif;
         width: 100%;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        font-size: 1rem; /* Tamanho do rodapé */
+        font-size: 1rem;
+        position: relative; /* Altera a posição do footer */
+        margin-top: auto; /* Permite que o rodapé fique na parte inferior do conteúdo */
       }
 
       a {
@@ -104,14 +104,13 @@
         border: 2px solid black;
         padding: 5px 10px;
         border-radius: 5px;
-        background-color: rgb(128, 0, 128); /* Botão de link com cor roxa viva */
+        background-color: rgb(128, 0, 128);
       }
 
       a:hover {
-        background-color: #9400d3; /* Roxo mais escuro ao passar o mouse */
+        background-color: #9400d3;
       }
 
-      /* Texto em negrito */
       .bold-text {
         font-weight: bold;
       }
@@ -186,7 +185,7 @@
       }
     </script>
 
-    <!-- Rodapé fixo na parte inferior da tela -->
+    <!-- Rodapé -->
     <footer class="footer">
       <p>By Alipetz</p>
       <p>Acesse nosso banner</p>
